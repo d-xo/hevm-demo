@@ -17,7 +17,6 @@
              hevm.packages.${system}.default
              foundry.defaultPackage.${system}
              pkgs.solc
-             pkgs.coq
            ];
          };
        });

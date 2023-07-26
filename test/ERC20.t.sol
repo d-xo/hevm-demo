@@ -47,10 +47,6 @@ contract TestERC20 is DSTest {
         token.mint(address(this), supply);
         token.burn(address(this), amt);
 
-        assert(supply - amt + 1 == token.totalSupply());
-    }
-
-    function test_cex() public {
-        prove_burn(57896044618658097711785492504343953926634992332820282019728792003956564819968,1);
+        assert(supply - amt == token.totalSupply());
     }
 }
