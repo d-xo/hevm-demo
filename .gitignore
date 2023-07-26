@@ -1,3 +1,5 @@
-direnv/
+.direnv/
 result
 result/
+out/
+cache/
