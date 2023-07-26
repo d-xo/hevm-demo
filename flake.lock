@@ -148,15 +148,16 @@
         "solidity": "solidity"
       },
       "locked": {
-        "lastModified": 1690320576,
-        "narHash": "sha256-Mc3Ul3QfcNyld7zAaPSWTau97NnZcq3+3jtq6Ck+GZM=",
+        "lastModified": 1690377649,
+        "narHash": "sha256-wmy5Ag9pPQ7WrIDLSu7YvezaX9NeIUfPWDmX5q/9/0w=",
         "owner": "ethereum",
         "repo": "hevm",
-        "rev": "7cd6e594befe27e43122a667e9ace023e92b3ea1",
+        "rev": "06ec30a370ae45797e147434962e98c3470acf8a",
         "type": "github"
       },
       "original": {
         "owner": "ethereum",
+        "ref": "default-to-no-ds-test",
         "repo": "hevm",
         "type": "github"
       }

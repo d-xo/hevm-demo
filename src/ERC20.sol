@@ -35,7 +35,7 @@ contract ERC20 {
         return transferFrom(msg.sender, dst, wad);
     }
     function transferFrom(address src, address dst, uint wad)
-        public returns (bool)
+        virtual public returns (bool)
     {
         require(balanceOf[src] >= wad, "insufficient-balance");
         if (src != msg.sender && allowance[src][msg.sender] != type(uint).max) {
@@ -43,7 +43,7 @@ contract ERC20 {
             allowance[src][msg.sender] -= wad;
         }
         balanceOf[src] -= wad;
-        balanceOf[dst] -= wad;
+        balanceOf[dst] += wad;
         emit Transfer(src, dst, wad);
         return true;
     }
@@ -67,4 +67,13 @@ contract ERC20 {
         emit Approval(msg.sender, usr, wad);
         return true;
     }
+}
+
+contract BrokenERC20 is ERC20 {
+    function transferFrom(address src, address dst, uint wad) override public returns (bool) {
+        bool res = super.transferFrom(src,dst,wad);
+        assert(res == false);
+        return res;
+    }
+
 }

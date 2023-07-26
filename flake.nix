@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    hevm.url = "github:ethereum/hevm";
+    hevm.url = "github:ethereum/hevm/default-to-no-ds-test";
     flake-utils.url = "github:numtide/flake-utils";
     foundry.url = "github:shazow/foundry.nix";
   };
