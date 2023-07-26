@@ -13,7 +13,7 @@
        {
          devShell = pkgs.mkShell {
            buildInputs = [
-             act.packages.${system}.default
+             /* act.packages.${system}.default */
              hevm.packages.${system}.default
              foundry.defaultPackage.${system}
              pkgs.solc
