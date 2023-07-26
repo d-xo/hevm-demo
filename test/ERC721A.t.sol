@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 import 'src/ERC721A.sol';
 import {DSTest} from 'ds-test/test.sol';
 
-contract ERC721ATest is (ERC721A, DSTest) {
+contract ERC721ATest is ERC721A, DSTest {
 
     constructor(string memory name_, string memory symbol_) ERC721A(name_, symbol_) { }
 
